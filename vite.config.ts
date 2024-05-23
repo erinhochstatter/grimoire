@@ -12,7 +12,11 @@ export default defineConfig({
         id: 'vxj5fru',
         defer: true,
         injectTo: 'head-prepend',
+
       },
     })
   ],
+  css: {
+    transformer: 'lightningcss'
+  }
 })
