@@ -1,0 +1,22 @@
+{
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": true,
+  "overrides": [
+    {
+      "files": [".prettierrc", ".babelrc", ".graphqlconfig"],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ],
+  "printWidth": 100,
+  "requirePragma": false,
+  "quoteProps": "as-needed",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all"
+}

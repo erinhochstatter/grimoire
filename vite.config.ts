@@ -14,7 +14,18 @@ export default defineConfig({
         injectTo: 'head-prepend',
 
       },
-    })
+      google: {
+        preconnect: true,
+        injectTo: 'head-prepend',
+        families: [
+          {
+            name: 'Rethink Sans',
+            styles: 'ital,wght@0,400..800',
+            defer: true,
+          },
+        ],
+      },
+    }),
   ],
   css: {
     transformer: 'lightningcss'

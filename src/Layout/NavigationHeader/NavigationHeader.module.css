@@ -1,0 +1,53 @@
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  color: #46795a
+}
+
+.title {
+  font-family: Heritage-Display;
+  color: inherit;
+}
+
+.subtitle {
+  font-family: Rethink Sans;
+  color: inherit;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Rethink Sans;
+  color: inherit;
+  list-style: none;
+  list-style-position: initial;
+  list-style-image: initial;
+  list-style-type: none;
+  column-gap: 16px;
+}
+
+.addNew {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+  background-color: #46795a;
+  color: white;
+  line-height: unset;
+  border-radius: 0;
+  padding: 4px;
+
+}
+
+
+

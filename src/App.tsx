@@ -1,10 +1,14 @@
-import { useState, version } from "react";
+import { useState, version } from 'react'
 import './App.css'
-import { HomePage } from "./Pages/HomePage/HomePage";
+import { HomePage } from './Pages/Home/HomePage'
+import { NavigationHeader } from './Layout/NavigationHeader/NavigationHeader'
 
 function App() {
   return (
-   <HomePage greeting="hello, witches"/>
+    <div className='layout'>
+      <NavigationHeader />
+      <HomePage initialTab='books' />
+    </div>
   )
 }
 
