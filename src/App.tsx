@@ -5,7 +5,7 @@ import { NavigationHeader } from './Layout/NavigationHeader/NavigationHeader'
 
 function App() {
   return (
-    <div className='layout'>
+    <div>
       <NavigationHeader />
       <HomePage initialTab='books' />
     </div>

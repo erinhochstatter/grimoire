@@ -1,5 +1,5 @@
 :root {
-  font-family: Sinete, rethink-sans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Sinete, Usual, Usual, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -47,41 +47,39 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  border: none;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
+  font-weight: 700;
+  font-family: Usual;
+  background-color: transparent;
+  cursor: poUsual;
+  transition: background-color 0.25s;
 }
 button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:focus-visible,
+button:hover {
+  background-color: #b8d3c2;
+  color: white
 }
+
 
 /* defaulting to dark because of my machine. i'll set up a dark theme later.  */
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
+    color: #46795a;
     background-color: #d3e4d9;
   }
   a:hover {
-    color: #747bff;
+    color: #b8d3c2;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: transparent;
   }
 }
-@font-face {
+/* @font-face {
   font-family: Heritage Display;
   src:
     local(Heritage Display)
-    url("/Users/erinhochstatter/Code/grimoire/src/assets/fonts/Heritage-Display.otf") format("opentype");
-}
+    url("Users/erinhochstatter/Code/grimoire/src/assets/fonts/Heritage-Display.otf") format("opentype");
+} */
 

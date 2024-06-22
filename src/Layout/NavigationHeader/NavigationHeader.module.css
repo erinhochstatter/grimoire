@@ -1,24 +1,20 @@
 
 .container {
   display: flex;
+  flex: 1;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 60px;
-  width: 100%;
   color: #46795a
 }
 
-.title {
-  font-family: Heritage-Display;
-  color: inherit;
+.logo {
+  height: 24px
 }
 
 .subtitle {
-  font-family: Rethink Sans;
+  font-family: Usual;
   color: inherit;
 }
 
@@ -26,13 +22,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: Rethink Sans;
+  font-family: Usual;
   color: inherit;
   list-style: none;
   list-style-position: initial;
   list-style-image: initial;
   list-style-type: none;
   column-gap: 16px;
+  padding: 0
 }
 
 .addNew {
