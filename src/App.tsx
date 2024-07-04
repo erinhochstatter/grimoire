@@ -11,7 +11,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div>
         <NavigationHeader />
-        <HomePage initialTab='books' />
+        <HomePage selectedTab='books' />
       </div>
     </QueryClientProvider>
   )

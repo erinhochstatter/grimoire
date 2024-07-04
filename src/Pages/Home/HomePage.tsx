@@ -1,22 +1,55 @@
-import { FC } from 'react'
-import { BookCard, Book } from '../Books/BookCard'
+import { FC, useEffect } from 'react'
+import { useQuery } from '@tanstack/react-query'
+import { PostRow } from './Rows/PostRow'
 import styles from './HomePage.module.css'
 
-const madworld: Book = {
-  title: 'Andrea Gibson on the Blessings Of the Wound',
-  author: 'Micha Frazer-Carroll',
-  coverImagePath: './assets/book1.jpeg',
-  datePublished: new Date('July 5, 1900'),
-  dateAdded: new Date(),
-  type: 'Book',
+interface Friend {
+  first_name: string
+  last_name: string
+  avatar_url: string
 }
+
+interface Post {
+  title: string
+  author: string
+  kind: 'book' | 'podcast' | 'article'
+  datePublished: Date
+  coverImagePath: string
+  friend: Friend
+}
+
+type PostsResponse = {
+  posts: Post[]
+}
+
+const { VITE_API_BASE_URL } = import.meta.env
+
+const getPosts = async () => {
+  const res = await fetch(`${VITE_API_BASE_URL}/posts`, {
+    method: 'GET',
+    credentials: 'omit',
+  })
+
+  return await res.json()
+}
+
 export const HomePage: FC<Props> = () => {
-  const books = new Array(6).fill(madworld)
+  const { data, isPending, isError } = useQuery<PostsResponse>({
+    queryKey: ['posts'],
+    queryFn: getPosts,
+  })
+
+  if (isPending) {
+    return <div>...</div>
+  }
+
+  if (isError) {
+    return <div>We were unable to summon your grimoire</div>
+  }
+
   return (
     <div className={styles.container}>
-      {books.map((book, index) => (
-        <BookCard book={book} key={index} />
-      ))}
+      {data && data.posts.map((post, index) => <PostRow post={post} key={index} />)}
     </div>
   )
 }
