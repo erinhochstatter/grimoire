@@ -8,20 +8,19 @@ export default defineConfig({
   plugins: [
     react(),
     Unfonts({
-      typekit:
-      {
+      typekit: {
         id: 'vxj5fru',
         defer: true,
         injectTo: 'head-prepend',
-
       },
     }),
   ],
   css: {
-    transformer: 'lightningcss'
+    transformer: 'lightningcss',
   },
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './tests/setup.js',}
+    setupFiles: './tests/setup.ts',
+  },
 })

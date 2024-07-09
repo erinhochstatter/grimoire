@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  list-style-position: initial;
+  list-style-image: initial;
+  list-style-type: none;
+  padding: 0
+}
+
+.filterButton {
+  color: #46795a;
+  border: none;
+  font-family: Usual;
+  font-weight: 400;
+  font-size: 1em;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+/* .filterButton button:focus,
+.filterButton button:focus-visible,
+.filterButton button:hover {
+  background-color: #b8d3c2;
+  color: white
+} */

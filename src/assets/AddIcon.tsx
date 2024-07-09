@@ -1,6 +1,6 @@
 import React, { SVGProps } from 'react'
 
-export const ModalIcon = (props: SVGProps<SVGElement>) => (
+export const AddIcon = (props: SVGProps<SVGElement>) => (
   <svg
     aria-hidden='false'
     aria-label='Open Detail View'
@@ -12,7 +12,7 @@ export const ModalIcon = (props: SVGProps<SVGElement>) => (
     <polygon
       fill={props.fill}
       strokeWidth='0px'
-      points='72.5 0 .8 0 .8 6 62.2 6 2.9 65.4 7.1 69.6 66.5 10.3 66.5 71.7 72.5 71.7 72.5 0'
+      points='72.5 33.25 39.25 33.25 39.25 0 33.25 0 33.25 33.25 0 33.25 0 39.25 33.25 39.25 33.25 72.5 39.25 72.5 39.25 39.25 72.5 39.25 72.5 33.25'
     />
   </svg>
 )

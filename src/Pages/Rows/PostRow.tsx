@@ -1,14 +1,13 @@
 import React from 'react'
 import { format } from 'date-fns'
-import styles from './PostRow.module.css'
-import { OpenIcon } from '../../../assets/OpenIcon'
+import styles from './post.module.css'
+import { OpenIcon } from '../../assets/OpenIcon'
 
 interface Props {
   post: Post
 }
 
 export const PostRow: React.FC<Props> = ({ post }: Props) => {
-  console.log()
   // TODO: make the dot a square
   const dot = '\u2022'
   return (
@@ -27,13 +26,11 @@ export const PostRow: React.FC<Props> = ({ post }: Props) => {
           </div>
         </div>
         <div className={styles.details}>
-          <p className={styles.text}>
-            {dot} {post.kind}
-          </p>
+          <p className={styles.text}>{dot} post</p>
           <p className={styles.text}>Comments</p>
         </div>
       </div>
-      <img src={post.coverImagePath ?? 'https://picsum.photos/200/300'} className={styles.image} />
+      <img src={post.coverImagePath} className={styles.image} />
     </div>
   )
 }

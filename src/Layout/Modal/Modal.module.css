@@ -1,0 +1,12 @@
+.container[open] {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 200px
+}
+
+.container::backdrop {
+  background-color: black;
+}

@@ -5,3 +5,28 @@
   align-items: center;
 }
 
+.closeButton {
+  background-color: blue;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+dialog[open] {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 50%;
+  width: 60%;
+  border-color: #4C8E5F;
+}
+
+dialog::backdrop {
+  opacity: 40%;
+  background-color: #DAD3E3;
+  background-image: linear-gradient(130deg, #DAD3E3,
+      #4C8E5F 41.07%,
+      #412563 76.05%);
+}
