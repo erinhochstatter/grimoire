@@ -1,7 +1,7 @@
-import { FC, SyntheticEvent, useRef, useState } from 'react'
+import { FC, SyntheticEvent, useRef } from 'react'
 import styles from './NavigationHeader.module.css'
 import { NavigationLogo } from './GrimoireLogo'
-import { NavigationButton } from './NavigationButton'
+import { FilterLink } from './FilterLink'
 import { CloseIcon } from '../../assets/CloseIcon'
 import { AddIcon } from '../../assets/AddIcon'
 
@@ -21,10 +21,10 @@ export const NavigationHeader: FC<Props> = () => {
       <div className={styles.container}>
         <div>
           <ul className={styles.links}>
-            <NavigationButton title='ALL' />
-            <NavigationButton title='PODCASTS' />
-            <NavigationButton title='BOOKS' />
-            <NavigationButton title='ARTICLES' />
+            <FilterLink title='ALL' />
+            <FilterLink title='PODCASTS' />
+            <FilterLink title='BOOKS' />
+            <FilterLink title='ARTICLES' />
             <li>
               <button className={styles.addNew} onClick={onAddClicked}>
                 <AddIcon fill='white' />

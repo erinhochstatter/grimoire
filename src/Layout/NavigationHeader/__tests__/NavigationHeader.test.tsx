@@ -1,5 +1,6 @@
-import { screen, render, getByRole } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import { render } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import { describe, it, expect } from 'vitest'
 import { NavigationHeader } from '../NavigationHeader'
 
 describe('NavigationHeader', () => {
@@ -7,11 +8,9 @@ describe('NavigationHeader', () => {
     const filters = ['ALL', 'PODCASTS', 'BOOKS', 'ARTICLES']
 
     it('displays a button for each filter', () => {
-      let filterButton
-
-      render(<NavigationHeader />)
+      const result = render(<NavigationHeader />)
       filters.forEach((filter: string) => {
-        filterButton = screen.getByRole('button', { name: filter })
+        expect(result.getByRole('link', { name: filter })).toBeInTheDocument()
       })
     })
   })

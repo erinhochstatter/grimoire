@@ -1,4 +1,4 @@
-import { ReactNode, forwardRef, ForwardedRef, useRef, useImperativeHandle } from 'react'
+import { ReactNode, forwardRef, ForwardedRef } from 'react'
 import styles from './Modal.module.css'
 
 interface Props {
