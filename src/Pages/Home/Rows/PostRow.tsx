@@ -1,8 +1,8 @@
 import React from 'react'
 import { format } from 'date-fns'
+import { Post } from '../../../types'
 import styles from './PostRow.module.css'
 import { OpenIcon } from '../../../assets/OpenIcon'
-import { Post } from '../HomePage'
 
 interface Props {
   post: Post

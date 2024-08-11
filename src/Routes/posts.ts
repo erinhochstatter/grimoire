@@ -1,5 +1,4 @@
-import {  QueryClient } from '@tanstack/react-query'
-
+import { QueryClient } from '@tanstack/react-query'
 
 const { VITE_API_BASE_URL } = import.meta.env
 
@@ -19,11 +18,8 @@ const getPosts = async () => {
 
 export const postsLoader =
   (queryClient: QueryClient) =>
-  async ({  }) => {
+  async ({}) => {
     const query = postsQuery()
     // ⬇️ return data or fetch it
-    return (
-      queryClient.getQueryData(query.queryKey) ??
-      (await queryClient.fetchQuery(query))
-    )
+    return queryClient.getQueryData(query.queryKey) ?? (await queryClient.fetchQuery(query))
   }

@@ -5,10 +5,10 @@ import { FilterLink } from './FilterLink'
 import { CloseIcon } from '../../assets/CloseIcon'
 import { AddIcon } from '../../assets/AddIcon'
 
-export const NavigationHeader: FC<Props> = () => {
+export const NavigationHeader: FC = () => {
   const ref: React.Ref<HTMLDialogElement> = useRef(null)
 
-  const onAddClicked = (event: SyntheticEvent) => {
+  const onAddClicked = (_event: SyntheticEvent) => {
     ref.current?.showModal()
   }
 

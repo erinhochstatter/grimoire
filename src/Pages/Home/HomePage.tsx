@@ -5,7 +5,7 @@ import { postsQuery } from '../../Routes/posts'
 import { PostRow } from './Rows/PostRow'
 import styles from './HomePage.module.css'
 
-export const HomePage: FC<Props> = () => {
+export const HomePage: FC = () => {
   const { data, isPending, isError } = useQuery<PostsResponse>(postsQuery())
 
   if (isPending) {

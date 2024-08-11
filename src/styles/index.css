@@ -6,22 +6,21 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
-
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --lightning-colors:
-    ('primary': #0070f3,
-      'secondary': #6c757d,
-      'success': #28a745,
-      'danger': #dc3545,
-      'warning': #ffc107,
-      'info': #17a2b8,
-      'light': #f8f9fa,
-      'dark': #190D42,
-      'muted': #6c757d);
+  --lightning-colors: (
+    'primary': #0070f3,
+    'secondary': #6c757d,
+    'success': #28a745,
+    'danger': #dc3545,
+    'warning': #ffc107,
+    'info': #17a2b8,
+    'light': #f8f9fa,
+    'dark': #190d42,
+    'muted': #6c757d
+  );
 }
 
 a {
@@ -59,9 +58,8 @@ button:focus,
 button:focus-visible,
 button:hover {
   background-color: #b8d3c2;
-  color: white
+  color: white;
 }
-
 
 /* defaulting to dark because of my machine. i'll set up a dark theme later.  */
 @media (prefers-color-scheme: dark) {
