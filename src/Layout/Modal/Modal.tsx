@@ -15,8 +15,6 @@ export const Modal = forwardRef(function Modal(
     onClose()
   }
 
-  console.log('modal', { isOpen })
-
   return (
     <dialog open={isOpen} onClose={onClose} className={styles.container}>
       <button onClick={onCloseButtonClick}>bye</button>

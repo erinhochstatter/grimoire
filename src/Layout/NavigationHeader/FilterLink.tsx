@@ -7,10 +7,11 @@ interface Props {
 }
 
 export const FilterLink: FC<Props> = ({ title }) => {
-  const queryParam = title === 'ALL' ? '/' : `/posts?filter=${title.toLowerCase()}`
+  const path = title === 'ALL' ? '/' : `/posts?filter=${title.toLowerCase()}`
+
   return (
     <li className={styles.item}>
-      <NavLink className={styles.filterButton} to={queryParam}>
+      <NavLink className={styles.filterButton} to={path}>
         {title}
       </NavLink>
     </li>

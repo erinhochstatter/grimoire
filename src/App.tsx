@@ -10,7 +10,22 @@ const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
+    element: (
+      <>
+        <NavigationHeader />
+        <HomePage />
+      </>
+    ),
+    loader: postsLoader(queryClient),
+  },
+  {
+    path: '/posts',
+    element: (
+      <>
+        <NavigationHeader />
+        <HomePage />
+      </>
+    ),
     loader: postsLoader(queryClient),
   },
 ])
@@ -18,7 +33,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <NavigationHeader />
       <RouterProvider router={router} />
     </QueryClientProvider>
   )

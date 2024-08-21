@@ -8,8 +8,7 @@ describe('NavigationHeader', () => {
     const filters = ['ALL', 'PODCASTS', 'BOOKS', 'ARTICLES']
 
     it('displays a button for each filter', () => {
-      const result = render(
-      <></><NavigationHeader />)
+      const result = render(<NavigationHeader />)
       filters.forEach((filter: string) => {
         expect(result.getByRole('link', { name: filter })).toBeInTheDocument()
       })
