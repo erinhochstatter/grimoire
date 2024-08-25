@@ -9,8 +9,8 @@ export interface Post {
   author: string
   kind: 'book' | 'podcast' | 'article'
   datePublished: Date
-  coverImagePath: string
-  friend: Friend
+  coverImagePath?: string
+  friend?: Friend
 }
 
 export type PostsResponse = {
