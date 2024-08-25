@@ -9,7 +9,6 @@ interface Props {
 }
 
 export const PostRow: React.FC<Props> = ({ post }: Props) => {
-  console.log()
   // TODO: make the dot a square
   const dot = '\u2022'
   return (

@@ -43,3 +43,31 @@
   border-radius: 0;
   padding: 4px;
 }
+
+
+dialog[open] {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background-color: #d3e4d9;
+  font-family: Usual;
+  color: inherit;
+  list-style: none;
+  list-style-position: initial;
+  list-style-image: initial;
+  list-style-type: none;
+  max-width: 1440px;
+  width: 80%;
+  height: 60%;
+  border-color: #4c8e5f;
+}
+
+dialog::backdrop {
+  opacity: 30%;
+  background-color: #dad3e3;
+  background-image: linear-gradient(130deg, #dad3e3, #4c8e5f 41.07%, #412563 76.05%);
+}

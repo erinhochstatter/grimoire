@@ -2,8 +2,8 @@ import { FC, SyntheticEvent, useRef } from 'react'
 import styles from './NavigationHeader.module.css'
 import { NavigationLogo } from './GrimoireLogo'
 import { FilterLink } from './FilterLink'
-import { CloseIcon } from '../../assets/CloseIcon'
 import { AddIcon } from '../../assets/AddIcon'
+import { PostModal } from '../../Pages/PostModal/PostModal'
 
 export const NavigationHeader: FC = () => {
   const ref: React.Ref<HTMLDialogElement> = useRef(null)
@@ -35,15 +35,9 @@ export const NavigationHeader: FC = () => {
         <div className={styles.subtitle}>Shared resources for friends</div>
         <NavigationLogo fill='#46795a' className={styles.logo} />
       </div>
-
-      <dialog ref={ref} onClose={onClose} className={styles.dialog}>
-        <button onClick={onClose} className={styles.closeButton}>
-          <CloseIcon />
-        </button>
-        <form>
-          <label>title</label>
-          <input />
-        </form>
+      {/* dialog */}
+      <dialog ref={ref} onClose={onClose}>
+        <PostModal onClose={onClose} />
       </dialog>
     </>
   )
